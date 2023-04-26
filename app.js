@@ -14,6 +14,13 @@ mongoose.connect(DB).then(()=>{
 //NOTE - if i get deprication warning then i use this inside (DB, here)
 /*
 
+{
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+}
+
 */
 
 //
@@ -39,7 +46,7 @@ app.get('/contact',(req,res)=>{
 
 // middleware applied here
 app.get('/about',middleware,(req,res)=>{
-    console.log("About Section Midddleware is working");
+    console.log("About Section Middleware is working");
     res.send("Hello About from Server");
 });
 
