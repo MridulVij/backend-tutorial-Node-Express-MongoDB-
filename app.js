@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 
-// database connection -> mongod connection
-const DB = "mongodb+srv://mridul01:kCghsMLhyEaJhqGY@cluster0.gforvhb.mongodb.net/testdatabase?retryWrites=true&w=majority";
+// secure the database passwords from users
+dotenv.config({path: 'config.env'});
+
+const DB = process.env.DATABASE;
 
 mongoose.connect(DB).then(()=>{
     console.log('MongoDB Connected!');
@@ -52,6 +55,7 @@ app.get('/about',middleware,(req,res)=>{
 
 //
 app.get('/signup',(req,res)=>{
+
     res.send("Hello Signup from Server");
 });
 
