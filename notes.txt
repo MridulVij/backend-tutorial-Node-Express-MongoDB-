@@ -13,3 +13,6 @@ Learning of this Course
 3. MongoDB Connection
 4. Secure passwords of Database Connection
 5. Creating the User Schema
+6. Express Router Middleware setup
+7. Saving the user data in MongoDB // http status code response
+8. 

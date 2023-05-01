@@ -70,6 +70,7 @@ const middleware = (req, res, next)=>{
 //     res.send("Hello login from Server");
 // });
 
+
 //  this is used to tell the server that someone is visited in our site
 // and that shows our server is running correctly
 app.listen(PORT, ()=> {
